@@ -5,6 +5,7 @@
     "private": true,
     "license": "MIT",
     "author": "Microsoft",
+    "engines"     : {"node": "10.15.3"},    
     "scripts": {
         "start": "node index.js"
     }
