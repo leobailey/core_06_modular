@@ -13,7 +13,6 @@ app.get('/', (req, res)=>{
     response.end("Hello World!!! - node version (but soon to be express!)");
 }); */
 
-
-server.listen(port,()=>{
+app.listen(port,()=>{
     console.log("Server running at http://localhost:%d", port);
 });
