@@ -2,7 +2,7 @@ const http = require('http');
 
 const server = http.createServer((request, response) => {
     response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("Hello World!!! - node version");
+    response.end("Hello World!!! - node version (but soon to be express!)");
 });
 
 const port = process.env.PORT || 1337;
