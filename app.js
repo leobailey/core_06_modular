@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 
 
 app.get('/', (req, res)=>{
-    res.send('Welcome to my API - just express at the moment');
+    res.send('Welcome to my API - just express at the moment !');
 });
 
 /* const server = http.createServer((request, response) => {
