@@ -1,11 +1,11 @@
 //const http = require('http');
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 
 app.get('/', (req, res)=>{
-    res.send('Welcome to my API - just express at the moment !');
+    res.send('Welcome to my API - just express at the moment with some nodemon !!');
 });
 
 /* const server = http.createServer((request, response) => {

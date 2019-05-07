@@ -11,5 +11,16 @@
     "dependencies": {
         "express": "^4.16.4",
         "nodemon": "^1.19.0"
+    },
+    "nodemonConfig":{
+        "restartable": "rs",
+        "ignore": [
+            "node_modules/**/node_modules"
+        ],
+        "delay": "2500",
+        "env":{
+            "NODE_ENV":"development",
+            "PORT": 4000
+        }
     }
 }
