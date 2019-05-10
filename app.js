@@ -2,8 +2,16 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 4000;
+const path = require('path');
 
 const demoRouter = express.Router();
+
+
+// viewed at http://localhost:8080
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
+
 
 demoRouter.route('/books')
     .get((req, res) =>{
