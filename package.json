@@ -10,16 +10,17 @@
     },
     "dependencies": {
         "express": "^4.16.4",
+        "mongoose": "^5.5.7",
         "nodemon": "^1.19.0"
     },
-    "nodemonConfig":{
+    "nodemonConfig": {
         "restartable": "rs",
         "ignore": [
             "node_modules/**/node_modules"
         ],
         "delay": "2500",
-        "env":{
-            "NODE_ENV":"development",
+        "env": {
+            "NODE_ENV": "development",
             "PORT": 4000
         }
     }
