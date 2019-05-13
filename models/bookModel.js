@@ -12,7 +12,7 @@ const bookModel = new Schema(
 
 
 // Create am object called Books that is a model based on the bookModel Schema 
-const Books = mongoose.model('Book', bookModel)
+const Book = mongoose.model('Book', bookModel)
 
 // Export the model so we can use it in our code
 module.exports = Book
