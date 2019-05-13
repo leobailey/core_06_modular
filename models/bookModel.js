@@ -10,4 +10,13 @@ const bookModel = new Schema(
     }
 );
 
-module.exports = mongoose.model('Book', bookModel);
+
+// Create am object called Books that is a model based on the bookModel Schema 
+const Books = mongoose.model('Book', bookModel)
+
+// Export the model so we can use it in our code
+module.exports = Book
+
+//Export in one line
+// Export from this module an objec called Book which is a model based on the Schema bookModel
+//module.exports = mongoose.model('Book', bookModel);

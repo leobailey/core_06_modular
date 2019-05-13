@@ -33,6 +33,17 @@ demoRouter.route('/Books')
     });
 });
 
+// servers the demo router book (look fo id) api endpoint
+demoRouter.route('/Books/:bookId')
+.get((req, res)=> {
+    Book.findById(req.params.bookId, (err, book) => {
+        if (err){
+            return res.send(err);
+        } 
+        return res.json(book);
+    });
+});
+
 /* demoRouter.route('/books')
     .get((req, res) =>{
         Book.find((err, books) => {
