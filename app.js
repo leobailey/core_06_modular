@@ -5,9 +5,13 @@ const app = express();
 const port = process.env.PORT || 4000;
 const path = require('path');
 
+
 const demoRouter = express.Router();
 const db = mongoose.connect('mongodb://coredbUser:c0r3dbuser@ds044787.mlab.com:44787/coredb?authSource=coredb')
 const Book = require('./models/bookModel');
+
+// This enables express to serve static content - makes the images, css and js file work for static html pages
+app.use(express.static('./'))
 
 // servers the html page
 app.get('/', function(req, res) {
