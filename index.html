@@ -27,7 +27,25 @@
         <!-- Page loader -->
         <script src="js/page-loader.min.js"></script>
 
+        <!-- MAP Libraries : START -->
 
+        <!-- Load : MapBox -->
+        <script src='https://api.mapbox.com/mapbox.js/v3.1.0/mapbox.js'></script>
+        <link href='https://api.mapbox.com/mapbox.js/v3.1.0/mapbox.css' rel='stylesheet' />
+    
+        <!-- Load : Google Fonts -->
+        <!-- <link href='//fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'> -->
+        
+        <!-- Load : JQuery -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        
+        <!-- Load : StyleSheet -->
+        <link rel="stylesheet" href="map_style.css">
+
+        <!-- Load Script file -->
+        <script src="map_script.js"></script>
+
+        <!-- MAP Libraries : END -->
 
     </head>
 
@@ -405,6 +423,33 @@
                     </ul>
                 </div>
             </aside>
+            <!-- START - my MAP Section-->
+            <div id="mapArea">
+                <section id="content">
+                    <div class="card">
+                        <div class="card__header">
+                            <h2>Map</h2>
+                            <div class="actions">
+                                <a href=""><i class="zmdi zmdi-check-all"></i></a>
+                                <a href=""><i class="zmdi zmdi-trending-up"></i></a>
+                                <div class="dropdown">
+                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="">Change Date Range</a></li>
+                                        <li><a href="">Change Graph Type</a></li>
+                                        <li><a href="">Other Settings</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Map Element : START -->
+                        <div id='map'></div>
+                        <!-- Map Element : END -->                        
+                    </div>
+
+                </section>
+            </div>
+            <!-- END - MAP Section -->
             <!-- START - my first VUE Element-->
             <div id="growler">
                 <section id="content">
@@ -442,61 +487,13 @@
                                 </div>
                             </a>
 
-                           <!--  
-                            <a href="" class="list-group-item media">
-                                <div class="pull-left">
-                                    <img class="avatar-img" src="demo/img/profile-pics/5.jpg" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <div class="list-group__heading">Candice Barnes</div>
-                                    <small class="list-group__text">Quisque non tortor ultricies, posuere elit id, lacinia purus curabitur.</small>
-                                </div>
-                            </a>
-
-                            <a href="" class="list-group-item media">
-                                <div class="pull-left">
-                                    <img class="avatar-img" src="demo/img/profile-pics/3.jpg" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <div class="list-group__heading">Jeannette Lawson</div>
-                                    <small class="list-group__text">Donec congue tempus ligula, varius hendrerit mi hendrerit sit amet. Duis ac quam sit amet leo feugiat iaculis</small>
-                                </div>
-                            </a>
-
-                            <a href="" class="list-group-item media">
-                                <div class="pull-left">
-                                    <img class="avatar-img" src="demo/img/profile-pics/4.jpg" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <div class="list-group__heading">Darla Mckinney</div>
-                                    <small class="list-group__text">Duis tincidunt augue nec sem dignissim scelerisque. Vestibulum rhoncus sapien sed nulla aliquam lacinia</small>
-                                </div>
-                            </a>
-
-                            <a href="" class="list-group-item media">
-                                <div class="pull-left">
-                                    <img class="avatar-img" src="demo/img/profile-pics/2.jpg" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <div class="list-group__heading">Rudolph Perez</div>
-                                    <small class="list-group__text">Phasellus a ullamcorper lectus, sit amet viverra quam. In luctus tortor vel nulla pharetra bibendum</small>
-                                </div>
-                            </a> 
-                            -->
-
                             <a href="" class="view-more">
                                 <i class="zmdi zmdi-long-arrow-right"></i> View all
                             </a>
                         </div>
-                        <!-- 
-                        div class="flot-chart-edge">
-                            <div id="chart-curved-line" class="flot-chart"></div>
-                        </div> 
-                        -->
                     </div>
                 </section>
-            </div>
-            <!-- END - my first VUE element -->
+            </div>            
             <section id="content">
                 <div class="card">
                     <div class="card__header">
