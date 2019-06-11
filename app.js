@@ -12,10 +12,10 @@ const Book = require('./models/bookModel');
 
 
 //basic scheduled job inmplementation 
-var schedule = require('node-schedule');
-var j = schedule.scheduleJob('42 * * * * *', function(){
-  console.log('The answer to life, the universe, and everything!');
-});
+//var schedule = require('node-schedule');
+//var j = schedule.scheduleJob('42 * * * * *', function(){
+//  console.log('The answer to life, the universe, and everything!');
+//});
 
 
 // This enables express to serve static content - makes the images, css and js file work for static html pages
