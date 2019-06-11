@@ -10,6 +10,14 @@ const demoRouter = express.Router();
 const db = mongoose.connect('mongodb://coredbUser:c0r3dbuser@ds044787.mlab.com:44787/coredb?authSource=coredb')
 const Book = require('./models/bookModel');
 
+
+//basic scheduled job inmplementation 
+var schedule = require('node-schedule');
+var j = schedule.scheduleJob('42 * * * * *', function(){
+  console.log('The answer to life, the universe, and everything!');
+});
+
+
 // This enables express to serve static content - makes the images, css and js file work for static html pages
 app.use(express.static('./'))
 
@@ -17,6 +25,7 @@ app.use(express.static('./'))
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
+
 
 // servers the demorouter demo api endpoint
 demoRouter.route('/Demo')
