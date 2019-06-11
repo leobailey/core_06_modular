@@ -23,7 +23,6 @@ demoRouter.route('/Demo')
 .get((req, res)=> {
     const response = {hello: 'This is my Demo API'};
     res.json(response);
-
 });
 
 // servers the demo router books api endpoint
@@ -34,6 +33,49 @@ demoRouter.route('/Books')
             return res.send(err);
         } 
         return res.json(books);
+    });
+});
+
+
+// Basic implementation of the MSSQL access
+demoRouter.route('/coreData')
+.get((req, res)=> {
+
+    var sql = require("mssql");
+
+    // config for your database
+    var config = {
+        //user: 'sa',
+        //password: 'mypassword',
+        //server: 'localhost', 
+        //database: 'SchoolDB' 
+	    user: 'systemsplanning-core-dev-sql-server-admin',
+        password: 'C0r3_D3v_Adm1n',
+        server: 'systemsplanning-core-dev-sql-server.database.windows.net', 
+        database: 'SystemsPlanning_CORE_DEV_SQL_DB',
+	// Extra bit recommended if using Azure
+    	options: {
+            encrypt: true // Use this if you're on Windows Azure
+    	}
+    };
+
+    // connect to your database
+    sql.connect(config, function (err) {
+    
+        if (err) console.log(err);
+
+        // create Request object
+        var request = new sql.Request();
+           
+        // query to the database and get the records
+        request.query('select * from DimGeo', function (err, recordset) {
+            
+            if (err) console.log(err)
+
+            // send records as a response
+            res.send(recordset);
+            
+        });
     });
 });
 
