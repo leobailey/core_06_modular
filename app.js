@@ -59,6 +59,9 @@ demoRouter.route('/coreData')
     	}
     };
 
+    //crude clear out of any exisitng connections
+    sql.close();
+
     // connect to your database
     sql.connect(config, function (err) {
     
@@ -77,6 +80,7 @@ demoRouter.route('/coreData')
             
         });
     });
+    
 });
 
 
