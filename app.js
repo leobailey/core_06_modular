@@ -1,7 +1,7 @@
 const http = require('http');
 const express = require('express');
 const mongoose = require('mongoose');
-const app = express();
+const app = require('express')();
 const port = process.env.PORT || 4000;
 const path = require('path');
 
@@ -9,6 +9,7 @@ const path = require('path');
 const demoRouter = express.Router();
 const db = mongoose.connect('mongodb://coredbUser:c0r3dbuser@ds044787.mlab.com:44787/coredb?authSource=coredb')
 const Book = require('./models/bookModel');
+const IPLookUp = require('./models/IPLookupModel');
 
 
 //basic scheduled job inmplementation 
